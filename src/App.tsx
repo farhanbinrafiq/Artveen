@@ -6,6 +6,7 @@
 import React from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Header } from './components/Header';
+import { HomeHero } from './components/HomeHero';
 import { LivingGallery } from './components/LivingGallery';
 import { FeaturedCollections } from './components/FeaturedCollections';
 import { FeaturedOriginals } from './components/FeaturedOriginals';
@@ -78,6 +79,7 @@ const AppContent: React.FC = () => {
       case 'home':
         return (
           <>
+            <HomeHero />
             <LivingGallery />
             <FeaturedCollections />
             <FeaturedOriginals />
