@@ -93,7 +93,7 @@ export const CookieConsent: React.FC = () => {
               </div>
 
               <p className="text-xs text-[#3D3D3D] leading-relaxed font-light" id="cookie-consent-desc">
-                We use cookies and telemetry metrics to curate an optimal exhibition journey, verify physical provenance, and measure digital interactions on Tanveen's Art Escape. Respecting your privacy is fundamental to our fine art ethos.
+                We use cookies and telemetry metrics to curate an optimal exhibition journey, verify physical provenance, and measure digital interactions on Artveen. Respecting your privacy is fundamental to our fine art ethos.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-2 pt-1">

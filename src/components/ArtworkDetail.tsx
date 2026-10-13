@@ -320,7 +320,7 @@ export const ArtworkDetail: React.FC = () => {
                 <div className="flex items-center space-x-2 pt-2 border-t border-soft-border/50">
                   <span className="w-1.5 h-1.5 bg-signature-carmine rounded-full" />
                   <span className="text-[9px] uppercase font-sans tracking-[0.15em] text-slate-gray/80 font-bold">
-                    Tanveen Art Escape • Studio Note #{artwork.id.slice(-3)}
+                    Artveen • Studio Note #{artwork.id.slice(-3)}
                   </span>
                 </div>
               </div>
@@ -937,7 +937,7 @@ export const ArtworkDetail: React.FC = () => {
                   <div className="space-y-2">
                     <h3 className="font-serif text-2xl font-light text-charcoal-ink">Acquisition Authorized</h3>
                     <p className="text-xs text-slate-gray max-w-sm mx-auto leading-relaxed">
-                      Congratulations! Your registration has been officially filed inside the Tanveen Art Escapes historical collector ledger.
+                      Congratulations! Your registration has been officially filed inside the Artveen historical collector ledger.
                     </p>
                   </div>
                   <div className="p-5 bg-[#FAF9F5] border border-soft-border rounded-xs text-left max-w-sm mx-auto space-y-3 font-sans text-xs">

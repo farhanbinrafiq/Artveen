@@ -217,8 +217,9 @@ export const LivingGallery: React.FC = () => {
         {/* Right Side: Immersive Asymmetrical Canvas Display (takes 7 columns to dominate) */}
         <div className="lg:col-span-7 flex flex-col items-center justify-center relative z-0">
           
-          <div 
-            className="relative w-full aspect-[4/3] sm:aspect-[1.4] bg-[#FAF9F6] border border-soft-border rounded-xs p-12 lg:p-16 flex items-center justify-center cursor-pointer group shadow-[0_24px_50px_rgba(0,0,0,0.02)] hover:border-signature-carmine/20 transition-all duration-700"
+          {/* Fixed-height stage keeps the layout steady; the frame itself hugs each artwork's own proportions */}
+          <div
+            className="relative w-full h-[60vh] min-h-[420px] lg:h-[72vh] flex items-center justify-center cursor-pointer"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onTouchStart={handleTouchStart}
@@ -226,17 +227,6 @@ export const LivingGallery: React.FC = () => {
             onClick={() => setRoute('artwork-detail', activeArtwork.id)}
             id="cinematic-canvas-frame"
           >
-            {/* Elegant Sold Tag Overlay */}
-            {activeArtwork.isSold && (
-              <div className="absolute top-6 left-6 z-20 bg-charcoal-ink text-canvas-white px-4 py-1.5 rounded-xs text-[9px] font-sans font-bold uppercase tracking-widest flex items-center space-x-2 shadow-sm border border-canvas-white/10">
-                <span className="w-1.5 h-1.5 rounded-full bg-signature-carmine animate-pulse" />
-                <span>Acquired</span>
-              </div>
-            )}
-
-            {/* Subtle overlay gradient from theme */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#C4D8E2]/5 via-[#F0FFF0]/5 to-[#FFFAFA]/10 opacity-60 z-10 pointer-events-none" />
-
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={activeArtwork.id}
@@ -247,15 +237,26 @@ export const LivingGallery: React.FC = () => {
                 variants={slideVariants}
                 className="w-full h-full flex items-center justify-center relative z-0"
               >
-                {/* Artwork Painting Image - Floating shadow effect */}
-                <motion.img
-                  src={activeArtwork.image}
-                  alt={activeArtwork.title}
-                  className="max-w-[85%] max-h-[85%] object-contain shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-transform duration-[2s] ease-out bg-white p-3 border border-soft-border"
-                  style={{ transform: isHovered ? 'scale(1.02)' : 'scale(1)' }}
-                  referrerPolicy="no-referrer"
-                  id={`slide-canvas-img-${activeArtwork.id}`}
-                />
+                {/* Gallery frame: white mat, inset gold rule, soft plum shadow — no empty canvas around the art */}
+                <div
+                  className="relative max-w-full max-h-full bg-white p-2.5 sm:p-3 ring-1 ring-artveen-plum/10 shadow-[0_28px_60px_rgba(52,22,57,0.22)] transition-transform duration-[2s] ease-out"
+                  style={{ transform: isHovered ? 'scale(1.015)' : 'scale(1)' }}
+                >
+                  {/* Elegant Sold Tag Overlay */}
+                  {activeArtwork.isSold && (
+                    <div className="absolute top-6 left-6 z-20 bg-charcoal-ink text-canvas-white px-4 py-1.5 rounded-xs text-[9px] font-sans font-bold uppercase tracking-widest flex items-center space-x-2 shadow-sm border border-canvas-white/10">
+                      <span className="w-1.5 h-1.5 rounded-full bg-signature-carmine animate-pulse" />
+                      <span>Acquired</span>
+                    </div>
+                  )}
+                  <img
+                    src={activeArtwork.image}
+                    alt={activeArtwork.title}
+                    className="block w-auto h-auto max-w-full max-h-[calc(60vh-1.5rem)] lg:max-h-[calc(72vh-1.5rem)] outline outline-1 outline-artveen-gold/60"
+                    referrerPolicy="no-referrer"
+                    id={`slide-canvas-img-${activeArtwork.id}`}
+                  />
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -294,7 +295,7 @@ export const LivingGallery: React.FC = () => {
           </div>
 
           {/* Floating 'Established 2026' text layout */}
-          <div className="absolute top-12 right-12 flex items-center gap-4 pointer-events-none hidden xl:flex">
+          <div className="absolute top-0 -right-8 flex items-center gap-4 pointer-events-none hidden xl:flex">
             <div className="w-[1px] h-12 bg-soft-border"></div>
             <span className="font-serif text-[9px] tracking-widest uppercase rotate-90 origin-left whitespace-nowrap translate-y-3 text-slate-gray/70">
               Established 2026

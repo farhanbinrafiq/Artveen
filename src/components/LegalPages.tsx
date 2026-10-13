@@ -64,7 +64,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ type }) => {
                   1. Scope of the Exhibition Service
                 </h2>
                 <p>
-                  Welcome to Tanveen’s Art Escape (the “Studio Platform”). These Terms of Collection govern the showcase, reservation, certified purchase, and delivery of original sea-salt canvas paintings, mixed-media masterworks, and custom giclée reproductions (collectively, "Artworks") offered by the artist Tanveen.
+                  Welcome to Artveen (the “Studio Platform”). These Terms of Collection govern the showcase, reservation, certified purchase, and delivery of original sea-salt canvas paintings, mixed-media masterworks, and custom giclée reproductions (collectively, "Artworks") offered by the artist Tanveen.
                 </p>
                 <p>
                   By navigating this platform, initiating a secured acquisition, or entering our Collector Registry, you enter a legally binding covenant adhering to standard physical provenance rules and intellectual property protections.
@@ -76,7 +76,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ type }) => {
                   2. Provenance & Verification Tokens
                 </h2>
                 <p>
-                  Every original canvas listed on Tanveen’s Art Escape is cataloged with a physical microchip embedded in the wooden stretcher and a verified entry in our central physical-ledger validation database. This system guarantees absolute authenticity, protecting collectors from downstream digital forgery or unauthorized physical replication.
+                  Every original canvas listed on Artveen is cataloged with a physical microchip embedded in the wooden stretcher and a verified entry in our central physical-ledger validation database. This system guarantees absolute authenticity, protecting collectors from downstream digital forgery or unauthorized physical replication.
                 </p>
                 <p>
                   Provenance certificates and physical verification documents are shipped in sealed wax cases alongside the primary artwork. Ownership transfer takes official effect upon signed receipt of physical delivery.

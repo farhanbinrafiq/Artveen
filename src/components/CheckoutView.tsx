@@ -646,7 +646,7 @@ export const CheckoutView: React.FC = () => {
                                   <option value="France">France</option>
                                   <option value="Japan">Japan</option>
                                   <option value="Singapore">Singapore</option>
-                                  <option value="Bangladesh">Bangladesh (Art Escape Headquarters)</option>
+                                  <option value="Bangladesh">Bangladesh (Artveen Headquarters)</option>
                                 </select>
                               </div>
 

@@ -196,7 +196,7 @@ export const INITIAL_APPLICATIONS: ArtistApplication[] = [
     name: 'Sajid Mahmud',
     email: 'sajid@mahmudart.com',
     portfolioUrl: 'https://sajidmahmud.art',
-    statement: 'I am deeply inspired by the high tactility of Tanveen’s Art Escape. I would love to showcase my woodblock ocean prints alongside her sea-salt canvases, building a collaborative regional ecosystem.',
+    statement: 'I am deeply inspired by the high tactility of Artveen. I would love to showcase my woodblock ocean prints alongside her sea-salt canvases, building a collaborative regional ecosystem.',
     mediums: ['Woodblock Prints', 'Linen Ink'],
     status: 'Pending',
     date: 'July 8, 2026'
@@ -283,7 +283,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'An immersive seascape capturing the serene light of dawn blending into coastal waters, textured with actual hand-harvested sea salt grains to create a tactile surface.',
     story: 'This was painted in early January as the winter mist lifted from the Cox’s Bazar shore. I blended hand-harvested sea salt directly into the final layers of acrylic glaze. When the room light shifts, the crystalline grains catch the light, mirroring the shimmer of actual wet sand.',
     artistNotes: 'Try hanging this in a space that receives natural morning light. The golden pigments are highly light-sensitive and will reveal deep coral undertones as the sun rises.',
-    image: getArtworkSvg('ocean', 'Whisper of the Ocean'),
+    image: '/artworks/whisper-of-the-ocean.jpg',
     orientation: 'portrait',
     featured: true,
     theme: 'Seascape',
@@ -540,7 +540,7 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     id: 'timeline-5',
     year: '2026',
     title: 'The Living Gallery Launch',
-    description: 'Designed and launched "Tanveen’s Art Escape," a premium editorial-first digital space to directly share original artwork, studio stories, and signed certificates of authenticity with global collectors.',
+    description: 'Designed and launched "Artveen," a premium editorial-first digital space to directly share original artwork, studio stories, and signed certificates of authenticity with global collectors.',
     iconType: 'star'
   }
 ];

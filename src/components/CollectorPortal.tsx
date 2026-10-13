@@ -1000,7 +1000,7 @@ export const CollectorPortal: React.FC = () => {
             <div className="max-w-2xl mx-auto bg-[#FCFBF7] border border-soft-border p-6 md:p-10 rounded-xs space-y-6">
               <div className="border-b border-soft-border/50 pb-4 text-center">
                 <span className="text-[9px] uppercase tracking-[0.4em] text-signature-carmine font-bold">Exhibitor Alliance</span>
-                <h3 className="font-serif text-2xl font-bold text-charcoal-ink mt-1">Apply to Exhibit at Art Escape</h3>
+                <h3 className="font-serif text-2xl font-bold text-charcoal-ink mt-1">Apply to Exhibit at Artveen</h3>
                 <p className="text-xs text-slate-gray font-light mt-1 max-w-md mx-auto leading-relaxed">
                   Are you an independent fine artist working with high material tactility? We invite guest artists and partners to exhibit alongside Tanveen in our digital sanctuary.
                 </p>
@@ -1129,7 +1129,7 @@ export const CollectorPortal: React.FC = () => {
               <div className="space-y-8">
                 <div className="space-y-2">
                   <h3 className="font-serif text-[10px] uppercase tracking-[0.45em] text-[#C5A880] font-bold">
-                    Tanveen’s Art Escape
+                    Artveen
                   </h3>
                   <h1 className="font-serif text-3xl md:text-4xl italic text-[#1D1B18] font-light">
                     Certificate of Authenticity

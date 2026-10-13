@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Dancing+Script:wght@400&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +9,11 @@
   --color-charcoal-ink: #1B1B1B;
   --color-slate-gray: #4A4A4A;
   --color-soft-border: #EAEAEA;
+
+  /* Artveen brand palette (from the logo) */
+  --color-artveen-plum: #341639;
+  --color-artveen-red: #c22026;
+  --color-artveen-gold: #e5b822;
 
   --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
   --font-sans: "Inter", "Manrope", system-ui, sans-serif;

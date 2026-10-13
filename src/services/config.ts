@@ -81,7 +81,7 @@ export const DEFAULT_FEATURE_FLAGS: FeatureFlags = {
 };
 
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
-  siteName: "Tanveen's Art Escape",
+  siteName: "Artveen",
   tagline: "Fine Art & High Tactility Editorial Sanctuary",
   announcement: {
     text: "New Vernissage: Discover 'Echoes of the Monsoon' exhibiting this summer.",
@@ -104,7 +104,7 @@ export const DEFAULT_PAGE_CONFIGS: Record<string, PageConfig> = {
     hero: {
       height: 'fullscreen',
       backgroundStyle: 'gradient',
-      title: "Tanveen's Art Escape",
+      title: "Artveen",
       subtitle: "Materializing silence on raw canvas with sea salts, rainwater, and natural earth pigments.",
       ctaText: "Explore Collection",
       ctaLink: "shop"
@@ -119,7 +119,7 @@ export const DEFAULT_PAGE_CONFIGS: Record<string, PageConfig> = {
       testimonials: { visible: true, title: "Collector Perspectives", backgroundStyle: 'white' }
     },
     seo: {
-      title: "Tanveen's Art Escape | Fine Tactile Painting Sanctuary",
+      title: "Artveen | Fine Tactile Painting Sanctuary",
       description: "Fine art portfolio and editorial gallery of artist Tanveen. Explore original sea-salt infused canvas paintings, local ocean art, and Sreemangal highlands sketches.",
       keywords: ["fine art", "tactile canvas", "sea salt painting", "Tanveen", "abstract art", "contemporary painting"]
     }
@@ -136,7 +136,7 @@ export const DEFAULT_PAGE_CONFIGS: Record<string, PageConfig> = {
       artGrid: { visible: true, title: "Artworks", backgroundStyle: 'white' }
     },
     seo: {
-      title: "Original Tactile Artworks & Prints | Tanveen's Art Escape",
+      title: "Original Tactile Artworks & Prints | Artveen",
       description: "Secure original textured canvases and archival paper limited prints hand-signed by Tanveen. Global insured shipment.",
     }
   },
@@ -151,7 +151,7 @@ export const DEFAULT_PAGE_CONFIGS: Record<string, PageConfig> = {
       blogGrid: { visible: true, title: "Logs", backgroundStyle: 'white' }
     },
     seo: {
-      title: "The Studio Chronicles | Tanveen's Art Escape Journal",
+      title: "The Studio Chronicles | Artveen Journal",
       description: "Read about studio experiments on sea salt crystallization, rainwater painting techniques, and travelogues from Sreemangal tea estates.",
     }
   }

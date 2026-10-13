@@ -26,7 +26,7 @@ export class FooterService {
         const saved = localStorage.getItem('art_escape_footer_config');
         return saved ? JSON.parse(saved) : {
           editorialQuote: "Each piece is a physical study in earth pigments, rainwater crystallization, and raw space.",
-          copyright: `© ${new Date().getFullYear()} Tanveen's Art Escape. Crafted with premium high-tactility materials. All rights reserved.`,
+          copyright: `© ${new Date().getFullYear()} Artveen. Crafted with premium high-tactility materials. All rights reserved.`,
           address: "The Highlands Studio, Sreemangal & Chittagong Coastal Sanctuary, Bangladesh",
           socials: {
             instagram: "https://instagram.com/tanveen.art",

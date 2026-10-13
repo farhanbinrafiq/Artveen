@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  * 
- * Tanveen's Art Escape - Analytics & CRO Intelligence Engine
+ * Artveen - Analytics & CRO Intelligence Engine
  * Standards-compliant tracking for GA4, GTM, Microsoft Clarity, Heatmaps, and Conversion Funnels.
  */
 
@@ -172,7 +172,7 @@ export function initAnalytics() {
 // 1. Page View / Route Tracking
 export function trackPageView(route: string) {
   const pathName = `/${route === 'home' ? '' : route}`;
-  const title = `Tanveen's Art Escape - ${route.toUpperCase()}`;
+  const title = `Artveen - ${route.toUpperCase()}`;
 
   // GA4
   window.gtag('event', 'page_view', {

@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { ShoppingBag, Heart, User, Search, Volume2, VolumeX, Menu, X, Check, Eye } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ArtveenLogo } from './ArtveenLogo';
 
 export const Header: React.FC = () => {
   const {
@@ -30,7 +31,7 @@ export const Header: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isRoleDropdownOpen, setIsRoleDropdownOpen] = useState(false);
 
-  // Monitor scrolling to toggle transparent -> solid background
+  // Monitor scrolling to tighten the bar and add depth once the page moves
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
@@ -60,8 +61,8 @@ export const Header: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-canvas-white/95 backdrop-blur-md border-b border-soft-border py-5 shadow-xs' 
-            : 'bg-transparent py-8'
+            ? 'bg-artveen-plum/95 backdrop-blur-md border-b border-artveen-gold/20 py-3 shadow-lg' 
+            : 'bg-artveen-plum border-b border-transparent py-5'
         }`}
         id="app-header"
       >
@@ -73,12 +74,10 @@ export const Header: React.FC = () => {
             className="text-left focus:outline-none group cursor-pointer"
             id="nav-logo-btn"
           >
-            <h1 className="text-xl md:text-2xl font-serif font-bold tracking-tight text-charcoal-ink transition-colors duration-300 group-hover:text-signature-carmine">
-              Tanveen’s Art Escape
-            </h1>
-            <p className="text-[9px] md:text-[10px] tracking-[0.35em] md:tracking-[0.4em] uppercase text-slate-gray font-sans mt-1 md:mt-1.5 font-semibold">
-              Editorial Fine Art Gallery
-            </p>
+            <h1 className="sr-only">Artveen</h1>
+            <ArtveenLogo
+              className={`w-auto transition-all duration-300 group-hover:opacity-85 ${isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-14'}`}
+            />
           </button>
 
           {/* Desktop Navigation */}
@@ -92,8 +91,8 @@ export const Header: React.FC = () => {
                 <button
                   key={link.route}
                   onClick={() => handleNavClick(link.route)}
-                  className={`relative font-sans text-xs uppercase tracking-[0.2em] font-bold transition-premium py-1 hover:text-signature-carmine focus:outline-none cursor-pointer ${
-                    isActive ? 'text-charcoal-ink' : 'text-slate-gray/80'
+                  className={`relative font-sans text-xs uppercase tracking-[0.2em] font-bold transition-premium py-1 hover:text-artveen-gold focus:outline-none cursor-pointer ${
+                    isActive ? 'text-white' : 'text-white/70'
                   }`}
                   id={`nav-link-${link.route}`}
                 >
@@ -101,7 +100,7 @@ export const Header: React.FC = () => {
                   {isActive && (
                     <motion.span
                       layoutId="navUnderline"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-signature-carmine rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-artveen-gold rounded-full"
                       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                     />
                   )}
@@ -111,16 +110,16 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Utilities Panel */}
-          <div className="flex items-center space-x-3 md:space-x-4">
+          <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4">
             
             {/* Live Role Switcher Toggler */}
             <div className="relative">
               <button
                 onClick={() => setIsRoleDropdownOpen(!isRoleDropdownOpen)}
-                className="hidden sm:flex items-center space-x-2 text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border border-soft-border bg-pure-white shadow-xs text-charcoal-ink hover:border-signature-carmine transition-premium cursor-pointer focus:outline-none"
+                className="hidden sm:flex items-center space-x-2 text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:border-artveen-gold transition-premium cursor-pointer focus:outline-none"
                 id="role-dropdown-trigger"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-signature-carmine animate-pulse" />
+                <span className="w-1.5 h-1.5 rounded-full bg-artveen-gold animate-pulse" />
                 <span className="font-bold">
                   {currentUser.role === 'guest' 
                     ? 'Visitor' 
@@ -175,10 +174,10 @@ export const Header: React.FC = () => {
             {/* Ambient Sound waves toggle */}
             <button
               onClick={toggleAudio}
-              className={`w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center rounded-xs border transition-premium focus:outline-none cursor-pointer ${
+              className={`w-11 h-11 lg:w-9 lg:h-9 hidden sm:flex items-center justify-center rounded-xs border transition-premium focus:outline-none cursor-pointer ${
                 audioEnabled 
-                  ? 'bg-signature-carmine text-canvas-white border-signature-carmine' 
-                  : 'bg-pure-white text-[#777777] border-soft-border hover:border-signature-carmine hover:text-signature-carmine'
+                  ? 'bg-artveen-red text-white border-artveen-red' 
+                  : 'bg-transparent text-white/70 border-white/20 hover:border-artveen-gold hover:text-artveen-gold'
               }`}
               title={audioEnabled ? "Disable Ambient Studio Sound" : "Enable Sound of the Studio"}
               id="ambient-sound-btn"
@@ -197,7 +196,7 @@ export const Header: React.FC = () => {
             {/* Search Trigger */}
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-[#777777] hover:text-signature-carmine transition-premium focus:outline-none cursor-pointer"
+              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-white/70 hover:text-artveen-gold transition-premium focus:outline-none cursor-pointer"
               title="Search Gallery"
               id="search-trigger-btn"
             >
@@ -207,13 +206,13 @@ export const Header: React.FC = () => {
             {/* Wishlist Button */}
             <button
               onClick={() => setRoute('portal')}
-              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-[#777777] hover:text-signature-carmine transition-premium relative focus:outline-none cursor-pointer"
+              className="w-11 h-11 lg:w-9 lg:h-9 hidden sm:flex items-center justify-center text-white/70 hover:text-artveen-gold transition-premium relative focus:outline-none cursor-pointer"
               title="View Wishlist"
               id="wishlist-trigger-btn"
             >
               <Heart className="w-[18px] h-[18px] stroke-[1.5]" />
               {wishlist.length > 0 && (
-                <span className="absolute top-1 right-1 lg:top-0 lg:right-0 w-4 h-4 bg-signature-carmine text-canvas-white text-[9px] rounded-full flex items-center justify-center font-bold font-sans animate-fade-in">
+                <span className="absolute top-1 right-1 lg:top-0 lg:right-0 w-4 h-4 bg-artveen-red text-white text-[9px] rounded-full flex items-center justify-center font-bold font-sans animate-fade-in">
                   {wishlist.length}
                 </span>
               )}
@@ -222,13 +221,13 @@ export const Header: React.FC = () => {
             {/* Cart Icon */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-[#777777] hover:text-signature-carmine transition-premium relative focus:outline-none cursor-pointer"
+              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-white/70 hover:text-artveen-gold transition-premium relative focus:outline-none cursor-pointer"
               title="Open Shopping Cart"
               id="cart-trigger-btn"
             >
               <ShoppingBag className="w-[18px] h-[18px] stroke-[1.5]" />
               {totalCartItems > 0 && (
-                <span className="absolute top-1 right-1 lg:top-0 lg:right-0 w-4 h-4 bg-charcoal-ink text-canvas-white text-[9px] rounded-full flex items-center justify-center font-bold font-sans animate-fade-in">
+                <span className="absolute top-1 right-1 lg:top-0 lg:right-0 w-4 h-4 bg-artveen-gold text-artveen-plum text-[9px] rounded-full flex items-center justify-center font-bold font-sans animate-fade-in">
                   {totalCartItems}
                 </span>
               )}
@@ -238,7 +237,7 @@ export const Header: React.FC = () => {
             <button
               onClick={() => setRoute('portal')}
               className={`w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center transition-premium relative focus:outline-none cursor-pointer ${
-                currentRoute === 'portal' ? 'text-signature-carmine' : 'text-[#777777] hover:text-signature-carmine'
+                currentRoute === 'portal' ? 'text-artveen-gold' : 'text-white/70 hover:text-artveen-gold'
               }`}
               title="My Account / Portal"
               id="account-portal-btn"
@@ -249,7 +248,7 @@ export const Header: React.FC = () => {
             {/* Mobile Hamburger menu */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-charcoal-ink lg:hidden hover:text-signature-carmine transition-premium focus:outline-none cursor-pointer"
+              className="w-11 h-11 lg:w-9 lg:h-9 flex items-center justify-center text-white lg:hidden hover:text-artveen-gold transition-premium focus:outline-none cursor-pointer"
               id="mobile-menu-trigger"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5 stroke-[1.5]" /> : <Menu className="w-5 h-5 stroke-[1.5]" />}
@@ -479,15 +478,15 @@ export const Header: React.FC = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-x-0 top-[70px] bg-canvas-white border-b border-soft-border z-40 p-6 flex flex-col space-y-4 lg:hidden shadow-xl paper-texture font-sans"
+            className="fixed inset-x-0 top-[88px] bg-artveen-plum border-b border-artveen-gold/20 z-40 p-6 flex flex-col space-y-4 lg:hidden shadow-xl font-sans"
             id="mobile-drawer"
           >
             {navLinks.map((link) => (
               <button
                 key={link.route}
                 onClick={() => handleNavClick(link.route)}
-                className={`text-left text-sm uppercase tracking-widest font-medium py-2.5 border-b border-soft-border/50 ${
-                  currentRoute === link.route ? 'text-signature-carmine font-bold' : 'text-slate-gray'
+                className={`text-left text-sm uppercase tracking-widest font-medium py-2.5 border-b border-white/10 ${
+                  currentRoute === link.route ? 'text-artveen-gold font-bold' : 'text-white/75'
                 }`}
                 id={`mobile-nav-${link.route}`}
               >
@@ -497,7 +496,7 @@ export const Header: React.FC = () => {
 
             {/* Mobile Toggler for user role view */}
             <div className="pt-2 flex flex-col space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-slate-gray/70 font-semibold">
+              <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">
                 Change Experience View
               </span>
               <div className="grid grid-cols-3 gap-2">
@@ -510,8 +509,8 @@ export const Header: React.FC = () => {
                     }}
                     className={`text-center py-2 text-[10px] uppercase font-semibold rounded-lg border transition-all ${
                       currentUser.role === role
-                        ? 'bg-charcoal-ink text-canvas-white border-charcoal-ink'
-                        : 'bg-pure-white text-slate-gray border-soft-border'
+                        ? 'bg-artveen-gold text-artveen-plum border-artveen-gold'
+                        : 'bg-white/5 text-white/75 border-white/20'
                     }`}
                   >
                     {role}
