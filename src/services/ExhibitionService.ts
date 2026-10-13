@@ -50,7 +50,7 @@ export class ExhibitionService {
             startDate: "July 1, 2026",
             endDate: "August 31, 2026",
             location: "Virtual Sanctuary & Studio Room, Sreemangal",
-            coverImage: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&q=80&w=1200",
+            coverImage: "/gallery/exhibition-wall-2.jpg",
             isVirtual: true,
             featuredArtworkIds: ['tanveen-canvas-01', 'tanveen-canvas-03']
           },
@@ -62,7 +62,7 @@ export class ExhibitionService {
             startDate: "October 10, 2026",
             endDate: "November 20, 2026",
             location: "Marine Gallery, Chittagong & Virtual Sanctuary",
-            coverImage: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=1200",
+            coverImage: "/gallery/pair-installation.jpg",
             isVirtual: false,
             featuredArtworkIds: ['tanveen-canvas-02', 'tanveen-canvas-04']
           }

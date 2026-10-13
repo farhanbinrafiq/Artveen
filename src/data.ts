@@ -244,7 +244,7 @@ export const INITIAL_COLLECTIONS: Collection[] = [
     artistId: 'tanveen',
     title: 'Ocean Dreams',
     description: 'A poetic collection inspired by the shifting moods, golden crests, and therapeutic depths of Bangladesh’s coastal horizons.',
-    coverImage: getArtworkSvg('ocean', 'Ocean Dreams'),
+    coverImage: '/artworks/whisper-of-the-ocean.jpg',
     story: 'For months, I woke up before dawn to observe the meeting of sky and water at Inani. The "Ocean Dreams" collection is my attempt to capture not just the physical waves, but the emotional release of staring into an endless blue. Every stroke is built slowly with modeling paste and acrylic glazes, mimicking the physical texture of dried sea salt and rolling foam.',
     featured: true
   },
@@ -253,7 +253,7 @@ export const INITIAL_COLLECTIONS: Collection[] = [
     artistId: 'tanveen',
     title: 'Nature Spirit',
     description: 'A quiet, deep study of visual dappling, misted forests, and the golden sunlight filtering through leaves.',
-    coverImage: getArtworkSvg('forest', 'Nature Spirit'),
+    coverImage: '/artworks/hourglass.jpg',
     story: 'In the busy modern world, we forget how to breathe with the trees. "Nature Spirit" represents my private escape into the deep green forests. I used thin, atmospheric glazes of Studio Mist and earthen pigment to let the light appear as if it is emanating directly from the canvas itself.',
     featured: true
   },
@@ -262,7 +262,7 @@ export const INITIAL_COLLECTIONS: Collection[] = [
     artistId: 'tanveen',
     title: 'Abstract Soul',
     description: 'Raw tactile textures, bold knife strokes, and geometric anchors exploring the landscapes of the inner self.',
-    coverImage: getArtworkSvg('abstract', 'Abstract Soul'),
+    coverImage: '/artworks/abstract-echoes.jpg',
     story: 'These works represent the moments where words failed me entirely. By discarding recognizable shapes, I allow the heavy texture, pure Carmine Red accents, and balanced charcoal outlines to speak directly to the viewer’s subconscious. It is art felt, not just seen.',
     featured: true
   }
@@ -308,7 +308,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'An ethereal landscape representing sunlight piercing through heavy forest fog, highlighted with delicate layers of 24k gold leaf.',
     story: 'While staying in Sreemangal, I watched the morning fog drape over the tea gardens and dense forest canopies. I wanted to capture that precise moment of silent breakthrough—when the golden warmth first tears through the cool mist.',
     artistNotes: 'Framed in a custom floating raw oak frame. The gold leaf detailing is hand-applied and reflects warm light beautifully under spotlights.',
-    image: getArtworkSvg('forest', 'Mist Over the Canopy'),
+    image: '/artworks/mist-over-the-canopy.jpg',
     orientation: 'square',
     featured: true,
     theme: 'Landscape',
@@ -331,7 +331,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'A powerful abstract piece dominated by textured strokes of Signature Carmine Red, balanced by deep charcoal ink fields and soft white breathing room.',
     story: 'This piece was born out of intense isolation. By limiting my palette strictly to Carmine, Charcoal, and Soft White, I forced myself to focus purely on the energy of the stroke itself. The heavy impasto was applied using a stainless steel palette knife in rapid, passionate movements.',
     artistNotes: 'This work is pre-sold to a private collector in Singapore, but limited canvas prints are available to purchase.',
-    image: getArtworkSvg('abstract', 'Crimson Solitude'),
+    image: '/artworks/crimson-solitude.jpg',
     orientation: 'landscape',
     featured: true,
     theme: 'Abstract',
@@ -355,7 +355,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'An expansive horizontal landscape focusing on the glowing sunset reflections on flat wet sands, shimmering with integrated gold mica particles.',
     story: 'I spent hours watching the tide recede during golden hour, leaving a glass-like sheet of water on the sand. This canvas uses ultra-fine mica dust to create a high-gloss horizontal band that mirrors that exact water-lens effect.',
     artistNotes: 'This is my largest canvas of 2025. It acts as an incredible statement centerpiece for a minimalist dining or living room.',
-    image: getArtworkSvg('minimalist', 'Golden Hour Tides'),
+    image: '/artworks/golden-hour-tides.jpg',
     orientation: 'landscape',
     featured: false,
     theme: 'Seascape',
@@ -379,7 +379,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'An elegant, smaller-scale study of interlocking circles, raw graphite sketch lines, and subtle Columbia Blue overlays.',
     story: 'Painted while listening to minimalist piano compositions, this artwork explores visual rhythm and repetition. Each circle is hand-drawn and layered beneath subsequent washes of diluted acrylic ink.',
     artistNotes: 'An excellent piece to start your original art collection. Pairs beautifully with modern, dark-toned interior accents.',
-    image: getArtworkSvg('minimalist', 'Abstract Echoes'),
+    image: '/artworks/abstract-echoes.jpg',
     orientation: 'square',
     featured: false,
     theme: 'Abstract',
@@ -400,7 +400,7 @@ export const INITIAL_ARTWORKS: Artwork[] = [
     description: 'An atmospheric, deeply evocative piece studying monsoon rain runs, crafted using natural pigments gathered from Sreemangal hills.',
     story: 'To capture the visceral experience of the heavy rainfall seasons, I exposed this fine linen canvas directly to the first monsoon shower of 2026. The rainwater washed through hand-crushed clay earth pigments and rich charcoal ink, drawing its own organic sediment lines across the texture.',
     artistNotes: 'Exhibited at the Dhaka Art Summit. Framed inside a high-end shadowbox of raw bleached maple. It is highly recommended to display this piece with minimal side-spotlighting to reveal the complex, delicate runs.',
-    image: getArtworkSvg('monsoon', 'Echoes of the Monsoon'),
+    image: '/artworks/echoes-of-the-monsoon.jpg',
     orientation: 'portrait',
     featured: true,
     theme: 'Landscape',
@@ -443,7 +443,7 @@ You can see this technique fully realized in my latest work, **"Whisper of the O
     category: 'Painting Process',
     readingTime: '5 min read',
     date: 'June 24, 2026',
-    image: getArtworkSvg('ocean', 'Texture & Tide'),
+    image: '/artworks/crowned-vessel.jpg',
     tags: ['Studio Diary', 'Acrylic Techniques', 'Cox’s Bazar', 'Textured Art'],
     relatedArtworkIds: ['whisper-of-the-ocean']
   },
@@ -472,7 +472,7 @@ By layering these custom glazes, I built **"Mist Over the Canopy"**. The paintin
     category: 'Travel',
     readingTime: '4 min read',
     date: 'May 12, 2026',
-    image: getArtworkSvg('forest', 'Chasing Canopy Fog'),
+    image: '/artworks/green-veil.jpg',
     tags: ['Travel Diary', 'Natural Pigments', 'Sreemangal', 'Inspiration'],
     relatedArtworkIds: ['mist-over-the-canopy']
   },
@@ -500,7 +500,7 @@ Never hang original paintings under direct, harsh afternoon sunlight, as UV rays
     category: 'Collector Stories',
     readingTime: '6 min read',
     date: 'April 05, 2026',
-    image: getArtworkSvg('minimalist', 'Hanging Statement Art'),
+    image: '/gallery/exhibition-wall-2.jpg',
     tags: ['Art Collecting', 'Interior Design', 'Hanging Guides', 'Lighting'],
     relatedArtworkIds: ['golden-hour-tides']
   }
@@ -553,7 +553,7 @@ export const INITIAL_TESTIMONIALS: Testimonial[] = [
     location: 'Singapore',
     quote: 'The moment I hung "Whisper of the Ocean" in my dining room, the entire energy of the apartment shifted. The light catches the subtle salt-grains in the morning, making it feel alive. Truly a masterpiece.',
     artworkTitle: 'Whisper of the Ocean',
-    image: getArtworkSvg('ocean', 'Sarah\'s Dining Room')
+    image: '/gallery/exhibition-wall.jpg'
   },
   {
     id: 'test-2',
@@ -561,7 +561,7 @@ export const INITIAL_TESTIMONIALS: Testimonial[] = [
     location: 'London, UK',
     quote: 'As interior designers, we are highly selective about art. Tanveen’s editorial landscapes offer an unparalleled depth of storytelling. The golden leaf detailing is magnificent under spotlighting.',
     artworkTitle: 'Mist Over the Canopy',
-    image: getArtworkSvg('forest', 'David\'s Living Room')
+    image: '/gallery/pair-hourglass-veil.jpg'
   },
   {
     id: 'test-3',
@@ -569,6 +569,6 @@ export const INITIAL_TESTIMONIALS: Testimonial[] = [
     location: 'Dhaka, Bangladesh',
     quote: 'I have collected three of Tanveen’s abstract studies. The emotional power of her Crimson brushstrokes is incredible. The buying experience, complete with the signed Certificate of Authenticity, is flawless.',
     artworkTitle: 'Crimson Solitude',
-    image: getArtworkSvg('abstract', 'Tanvir\'s Study')
+    image: '/gallery/pair-hands-yellow.jpg'
   }
 ];

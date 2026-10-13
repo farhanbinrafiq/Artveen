@@ -15,7 +15,7 @@ const EXHIBITION_PHOTOS = [
   { src: '/gallery/red-bloom.jpg', alt: 'Framed painting of a red bloom on the gallery wall' },
   { src: '/gallery/ocean-whisper-framed.jpg', alt: 'Framed blue abstract painting on the gallery wall' },
   { src: '/gallery/pair-installation.jpg', alt: 'Two framed paintings hung side by side' },
-  { src: '/gallery/gallery-trio.jpg', alt: 'Three paintings on the exhibition wall, including a portrait' },
+  { src: '/gallery/hourglass.jpg', alt: 'Framed painting of an hourglass resting on a green leaf' },
   { src: '/gallery/crowned-vessel.jpg', alt: 'Framed painting of a crowned checkered vessel' },
 ];
 
