@@ -21,7 +21,7 @@ const TikTok: React.FC<{ className?: string }> = ({ className }) => (
 const CONTACT = {
   phone: '+880 0141 0423014',
   phoneHref: '+88001410423014',
-  email: 'color@artveen.com',
+  email: 'studio@artveen.com',
   address: 'Sector 11, Uttara 1230 Dhaka, Bangladesh',
 };
 

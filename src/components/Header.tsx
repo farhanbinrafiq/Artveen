@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
-import { ShoppingBag, Heart, User, Search, Volume2, VolumeX, Menu, X, Check, Eye } from 'lucide-react';
+import { ShoppingBag, Heart, User, Search, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArtveenLogo } from './ArtveenLogo';
 
@@ -16,9 +16,6 @@ export const Header: React.FC = () => {
     cart,
     wishlist,
     currentUser,
-    switchUserRole,
-    audioEnabled,
-    toggleAudio,
     searchQuery,
     setSearchQuery,
     artworks,
@@ -29,7 +26,6 @@ export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isRoleDropdownOpen, setIsRoleDropdownOpen] = useState(false);
 
   // Monitor scrolling to tighten the bar and add depth once the page moves
   useEffect(() => {
@@ -112,87 +108,6 @@ export const Header: React.FC = () => {
           {/* Utilities Panel */}
           <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4">
             
-            {/* Live Role Switcher Toggler */}
-            <div className="relative">
-              <button
-                onClick={() => setIsRoleDropdownOpen(!isRoleDropdownOpen)}
-                className="hidden sm:flex items-center space-x-2 text-[10px] uppercase tracking-widest px-4 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:border-artveen-gold transition-premium cursor-pointer focus:outline-none"
-                id="role-dropdown-trigger"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-artveen-gold animate-pulse" />
-                <span className="font-bold">
-                  {currentUser.role === 'guest' 
-                    ? 'Visitor' 
-                    : currentUser.role === 'collector' 
-                      ? 'Collector' 
-                      : 'Artist'}
-                </span>
-              </button>
-              
-              <AnimatePresence>
-                {isRoleDropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="absolute right-0 mt-2 w-48 bg-canvas-white border border-soft-border rounded-xs shadow-xl p-2 z-50 text-xs font-sans paper-texture"
-                    id="role-dropdown-menu"
-                  >
-                    <p className="text-[10px] text-slate-gray/70 uppercase tracking-widest px-3 py-2 border-b border-soft-border mb-1 font-bold">
-                      Switch Role View
-                    </p>
-                    {(['guest', 'collector', 'admin'] as const).map((role) => (
-                      <button
-                        key={role}
-                        onClick={() => {
-                          switchUserRole(role);
-                          setIsRoleDropdownOpen(false);
-                        }}
-                        className="w-full flex items-center justify-between px-3 py-2 text-left rounded-xs hover:bg-gallery-blue/20 transition-all text-charcoal-ink font-semibold"
-                      >
-                        <span className="capitalize">{role === 'admin' ? 'Artist (Admin)' : role}</span>
-                        {currentUser.role === role && <Check className="w-3.5 h-3.5 text-signature-carmine" />}
-                      </button>
-                    ))}
-                    {currentUser.role === 'admin' && (
-                      <button
-                        onClick={() => {
-                          setRoute('cms');
-                          setIsRoleDropdownOpen(false);
-                        }}
-                        className="w-full mt-1.5 flex items-center space-x-2 px-3 py-2.5 bg-signature-carmine text-canvas-white rounded-xs hover:bg-opacity-90 transition-all text-left font-sans text-[11px] uppercase tracking-wider"
-                      >
-                        <Eye className="w-3.5 h-3.5" />
-                        <span>Go To CMS Control</span>
-                      </button>
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Ambient Sound waves toggle */}
-            <button
-              onClick={toggleAudio}
-              className={`w-11 h-11 lg:w-9 lg:h-9 hidden sm:flex items-center justify-center rounded-xs border transition-premium focus:outline-none cursor-pointer ${
-                audioEnabled 
-                  ? 'bg-artveen-red text-white border-artveen-red' 
-                  : 'bg-transparent text-white/70 border-white/20 hover:border-artveen-gold hover:text-artveen-gold'
-              }`}
-              title={audioEnabled ? "Disable Ambient Studio Sound" : "Enable Sound of the Studio"}
-              id="ambient-sound-btn"
-            >
-              {audioEnabled ? (
-                <div className="flex items-center space-x-[2px] h-3 px-1">
-                  <span className="w-[2px] h-3 bg-canvas-white animate-[bounce_0.8s_infinite_100ms]" />
-                  <span className="w-[2px] h-2 bg-canvas-white animate-[bounce_0.8s_infinite_300ms]" />
-                  <span className="w-[2px] h-3.5 bg-canvas-white animate-[bounce_0.8s_infinite_200ms]" />
-                </div>
-              ) : (
-                <VolumeX className="w-[18px] h-[18px] stroke-[1.5]" />
-              )}
-            </button>
-
             {/* Search Trigger */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -493,31 +408,6 @@ export const Header: React.FC = () => {
                 {link.label}
               </button>
             ))}
-
-            {/* Mobile Toggler for user role view */}
-            <div className="pt-2 flex flex-col space-y-2">
-              <span className="text-[10px] uppercase tracking-widest text-white/50 font-semibold">
-                Change Experience View
-              </span>
-              <div className="grid grid-cols-3 gap-2">
-                {(['guest', 'collector', 'admin'] as const).map((role) => (
-                  <button
-                    key={role}
-                    onClick={() => {
-                      switchUserRole(role);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className={`text-center py-2 text-[10px] uppercase font-semibold rounded-lg border transition-all ${
-                      currentUser.role === role
-                        ? 'bg-artveen-gold text-artveen-plum border-artveen-gold'
-                        : 'bg-white/5 text-white/75 border-white/20'
-                    }`}
-                  >
-                    {role}
-                  </button>
-                ))}
-              </div>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -114,7 +114,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ type }) => {
                   5. Shipping & White-Glove Hand Delivery
                 </h2>
                 <p>
-                  Original canvases are packed in custom wooden crates containing structural temperature controls. We use fully insured white-glove transport partners for global routes. If an item arrives with any structural blemish to the outer crate or internal canvas, take photographs immediately and notify our registrar at <span className="underline font-semibold text-charcoal-ink">studio@tanveenartescape.com</span> within twenty-four (24) hours of receipt to initiate transit insurance coverage.
+                  Original canvases are packed in custom wooden crates containing structural temperature controls. We use fully insured white-glove transport partners for global routes. If an item arrives with any structural blemish to the outer crate or internal canvas, take photographs immediately and notify our registrar at <span className="underline font-semibold text-charcoal-ink">studio@artveen.com</span> within twenty-four (24) hours of receipt to initiate transit insurance coverage.
                 </p>
               </section>
 
@@ -193,7 +193,7 @@ export const LegalPages: React.FC<LegalPagesProps> = ({ type }) => {
                 <ul className="list-disc pl-5 space-y-1">
                   <li>You may request a complete report of the personal shipping coordinates and details logged in our databases.</li>
                   <li>You may demand immediate, permanent erasure of your Collector Portal account, email subscription history, and associated transactional logs (subject to tax-keeping shipping regulations).</li>
-                  <li>To exercise these rights, simply email our compliance desk at <span className="underline font-semibold text-charcoal-ink">privacy@tanveenartescape.com</span>. We process all deletion queries within forty-eight (48) hours.</li>
+                  <li>To exercise these rights, simply email our compliance desk at <span className="underline font-semibold text-charcoal-ink">studio@artveen.com</span>. We process all deletion queries within forty-eight (48) hours.</li>
                 </ul>
               </section>
 

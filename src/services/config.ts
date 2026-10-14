@@ -87,7 +87,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     text: "New Vernissage: Discover 'Echoes of the Monsoon' exhibiting this summer.",
     visible: true,
   },
-  contactEmail: "studio@tanveenartescape.com",
+  contactEmail: "studio@artveen.com",
   currency: "USD",
   footerQuote: "Art is the materialization of silence, captured through water, earth, and crystal.",
   theme: {
